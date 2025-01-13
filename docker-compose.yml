@@ -1,0 +1,18 @@
+services:
+  app:
+    container_name: evotor
+    image: evotor:0.1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+
+    stdin_open: true
+    tty: true
+
+    networks:
+      - internal
+
+networks:
+  internal:
