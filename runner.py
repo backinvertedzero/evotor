@@ -22,5 +22,4 @@ if __name__ == "__main__":
             z = get_evotor_products_data(it['id'], connection)
             print(f"{it['name']}, {it['id']}")
             if z is not None:
-                #print(z)
-                pass
+                print(z)
