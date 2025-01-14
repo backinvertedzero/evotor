@@ -6,6 +6,6 @@ def get_evotor_products_data(evator_product_id: str, connection) -> dict:
 
         row = cursor.fetchone()
         if row is not None:
-            return {'user_id': row['user_id'], 'product_id': row['product_id']}
+            return {'id': row['id'], 'user_id': row['user_id'], 'product_id': row['product_id']}
         else:
             return {}
