@@ -18,6 +18,13 @@ if __name__ == "__main__":
     for item in duplicates:
         x = get_by_title(item, products)
         y = get_evotor_products_data_by_list(x, connection)
+
+        q = y[0]
+        id = q['id']
+        if id is not None:
+            # delete_product(creds['id'], creds['store_id'], q['pid'])
+            pass
+
         z = y[1:]
         for q in z:
             pid = q['pid']
