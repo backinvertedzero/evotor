@@ -23,3 +23,5 @@ if __name__ == "__main__":
             print(f"{it['name']}, {it['id']}")
             if z is not None:
                 print(z)
+
+        print("\n\n\n")
