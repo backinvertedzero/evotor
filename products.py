@@ -16,7 +16,7 @@ def get_evotor_products_data_by_list(evator_products: list, connection) -> list:
     for product in evator_products:
         x = get_evotor_products_data(product['id'], connection)
         id = x['id'] if 'id' in x else None
-        data.append({'pid': product['id'], 'id': id})
+        data.append({'pid': product['id'], 'id': id, 'pname': product['name']})
 
     return sorted(data,  key=lambda k:  (k['id'] is None, k['id'] == 0, k['id']), reverse=False)
 

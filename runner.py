@@ -22,8 +22,9 @@ if __name__ == "__main__":
         for q in z:
             pid = q['pid']
             id = q['id']
+            name = q['pname']
             # delete_product(creds['id'], creds['store_id'], pid)
             if id is not None:
                 # delete_product_from_db(id, connection)
                 pass
-            print(f"{pid}: {id}")
+            print(f"({name}) {pid}: {id}")
