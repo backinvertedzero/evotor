@@ -17,3 +17,10 @@ def get_all_products(id: str, store_id: str) -> list:
 
 
     return data['items']
+
+
+def delete_product(id: str, store_id: str, pid: str):
+    products_url = API_URL + store_id + '/products/' + pid
+    headers = {'X-Authorization': id}
+    httpx.delete(products_url, headers=headers)
+
